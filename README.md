@@ -17,7 +17,7 @@ I keep each project in a separate folder.  The folder names get stored as a macr
 do $my_project_name
 ```
 
-Here's more project_logistics.md
+Here's more: [project_logistics.md](https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/documentation/project_logistics.md) 
 
 ## Set up Oracle and ODBC
 1.  Open up /stata_code/sample/odbc_connection_macro_sample.do. 
@@ -105,3 +105,5 @@ Sorry, I'm not slick enough to pass a little arguement through to a stata do fil
 1. where users can get help with your project:  email me or open an issue
 1. who maintains and contributes to the project. Min-Yang
 
+# License file
+See here for the [license file] (https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/license.md)
