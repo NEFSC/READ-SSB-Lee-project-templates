@@ -1,2 +1,107 @@
-# READ-SSB-Lee-project-templates
-Project organization
+# Project Template
+
+A small repository that will get you started with setting up an organized project and get data off the NEFSC oracle servers.  This repository contains:
+
+1. A folder structure and some utilities that will (hopefully) help you keep things organized
+1. Sample code for extracting data from oracle using stata.
+1. Sample code for extracting data from oracle using R.
+1. Sample code for using R to call stata.
+1. Little bits of code from my ACE price project, in case it's useful.
+
+# Overview and Folder structure
+
+This is mostly borrowed from the world bank's EDB. https://dimewiki.worldbank.org/wiki/Stata_Coding_Practices
+
+I keep each project in a separate folder.  The folder names get stored as a macro in stata's startup profile.do.  This lets me start working on any of my projects by opening stata and typing: 
+```
+do $my_project_name
+```
+
+Here's more project_logistics.md
+
+## Set up Oracle and ODBC
+1.  Open up /stata_code/sample/odbc_connection_macro_sample.do. 
+1.  Delete or Comment out the Operating system section that is irrelevant to you.  Enter your own information (oracle username and password).  
+1.  Rename and save it in a place you can find that is NOT in this repository. Min-Yang put it into 
+```
+C:\Users\Min-Yang.Lee\Documents\common\odbc_setup_macros.do
+```
+
+Pay attention to where you put this, you will need it later.
+
+
+## Set up your profile.do
+
+1. Open up /stata_code/sample/sample_profile.do.
+1. Enter and modify with your own information (username,directories).  You will want the project_template global macro to point to the "project_logistics\folder_setup_globals.do" that is in your project directory (for me this is C:\Users\Min-Yang.Lee\Documents\project_templates\stata_code\project_logistics\folder_setup_globals.do
+1. Save it as "C:\ado\profile.do".  [Here is the stata manual](https://www.stata.com/manuals15/gsub.pdf) about this.
+
+
+## Set up the rest of the project. 
+1. Open up "project_logistics/run_this_once-folder_setup.do"
+1.  Add an "if" statement analogous to lines 15-18.  Put this below minyang's if statement.  Change the directory to match the one you used when you initially cloned this repository.
+1. Open up "project_logistics/folder_setup_globals.do"
+1.  Add an "if" statement analogous to lines 14-18. Put this below minyang's if statement.  Change the directory to match the one you used when you initially cloned this repository.  Change the quietly do line to run the bit of code that sets up your odbc connections.
+1. start stata. Type
+```
+do $project_template 
+do "/${my_codedir}/project_logistics/run_this_once_folder_setup.do" /*this line only needs to be run once*/
+```
+
+
+# Sample code for extracting data from oracle using stata
+
+do "/${extraction_code}/extract_from_sole.do"
+
+should extract a table from sole. 
+
+
+# Other Sample code for  stata
+I've included some other code to get data into stata, including getting data from St. Louis Federal Reserve.  I've also left some bits of code that assemble and process data.
+
+Also, take a look here: https://github.com/cameronspeir/NOAA-Foreign-Fishery-Trade-Data-API to get data from the NOAA Foreign fishery trade .
+
+
+# Sample code for extracting data from oracle using R.
+Code to extract data from oracle using R is here:
+
+```
+/R_code/data_extraction_processing/extraction/r_oracle_connection.R
+```
+Before using it, you should
+
+1. Rename /R_code/project_logistics/R_code/R_credentials_sample.R to R_credentials.R.
+1. Fill in your id, password, server names, hosts, and ports
+1. Change the first line of  /R_code/project_logistics/R_code/R_paths_libraries_setup.R to point to your project directory. Source .
+1. Make the same change to /R_code/data_extraction_processing/extraction/r_oracle_connection.R. Source.
+
+
+
+# Sample code for using R to call stata.
+
+This is in Rmd_stata_integration.Rmd. You should need to change only two lines of code:
+
+1.  Line 12 of the Rmd_stata_integration.Rmd should be changed to the directory where you cloned this repository locally.
+1.  Line 14 of stata_code\analysis\test1.do should also be changed to the same directory.
+1.  Line 14 of stata_code\analysis\wrapper32.do should be changed to the same directory.
+
+Sorry, I'm not slick enough to pass a little arguement through to a stata do file.
+
+
+# Problems  
+
+1. A little janky on setting up directories, that's life.
+
+
+# NOAA Requirements
+“This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.”
+
+
+1. who worked on this project:  
+1. when this project was created: Jan, 2021 
+1. what the project does: Helps people get organized.  Shows how to get data from NEFSC oracle 
+1. why the project is useful:  Helps people get organized.  Shows how to get data from NEFSC oracle 
+1. how users can get started with the project: Download and follow the readme
+1. where users can get help with your project:  
+1. who maintains and contributes to the project.
+

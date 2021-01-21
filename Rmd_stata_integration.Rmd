@@ -1,0 +1,113 @@
+---
+title: "Rmd_stata_integration"
+author: "Min-Yang Lee"
+date: "`r format(Sys.time(), '%B %d, %Y')`" 
+csl: ajae_mod.csl
+output:
+  pdf_document: 
+    includes:
+      in_header: preamble-latex.tex
+    keep_tex: yes
+    pandoc_args: --pdf-engine=pdflatex
+    number_sections: true
+  html_document: null
+  word_document: null
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+my_projdir<-"C:/Users/Min-Yang.Lee/Documents/project_templates"
+# This file needs to be run 1 time (ever). It sets up folders. After your first knit, you can comment it out (although leaving it in will not hurt
+#source(file.path(my_projdir,"R_code","project_logistics","R_paths_libraries_setup.R"))
+source(file.path("R_code","project_logistics","R_paths_libraries.R"))
+setwd(my_projdir)
+```
+
+# Setups
+I have set a bunch of stuff using the first chunk above. 
+
+1. You will have a my_projdir directory. 
+1. You set up libraries.
+1. There is a line of code that automagically finds your stata executable. 
+
+
+# Using Stata in Rmarkdown
+
+I am calling stata from R like this:
+```{r call_it, echo=TRUE, results='hide'}
+dofile<-"test1.do"
+full.path.dofile<-file.path(stata_analysis_code,dofile)
+cmd<-paste0('"',stataexe, '" /e do "',full.path.dofile,'"')
+system(cmd, wait=TRUE)
+```
+The cmd line is kind of rough. In order to have a double quotation \" in R, we have to escape it. We can either do that with '"' or we can do it with /".  After running this block of code, an image should appear in the images directory andd a latex table fragment should appear in the tables directory.
+
+Stata will write a logfile to the active directory. If you are following along with R's projects, this will be in the root of your project directory.
+
+
+# Including Plots
+
+You can also embed plots. This is not nearly as nice as native Rmd because you have to pay attention to the filenames:
+
+## knitr way
+This is the knitr way
+```{r , fig.show = "hold", out.width = "48%", fig.cap="Scatterplot from the auto dataset", fig.align = "center", echo=FALSE}
+knitr::include_graphics(file.path(my_images,c("scatterplot.png"))) 
+```
+
+## LaTeX way
+
+The straight to LaTeX way for figure \ref{scatterplot_fig} will cause fails if we're going to make an html or word.
+
+\begin{figure}
+  \begin{center}
+    \caption{Same scatterplot from the auto dataset, inserted and captioned LaTeX style\label{scatterplot_fig}}
+      \includegraphics[width=0.5\textwidth]{./images/scatterplot.png} 
+  \end{center}
+\end{figure}
+
+
+
+
+# Here is a table
+
+Table \ref{regression_coefs} was construted using outreg2 in stata. Outreg2 is nice because it only make the meat of the table (tabular environment), that makes inclusion easier.
+
+\begin{table}
+  \begin{center}
+    \input{./tables/regression_table.tex}
+        \caption{A Table of Regression coefficients from the auto dataset \label{regression_coefs}}
+
+  \end{center}
+\end{table}
+
+
+# Test wrappers
+
+This is a bit of code to test that a wrapper works properly. It does.  Wrapper32.do runs test3.do and then test2.do.
+
+```{r wrapper32, echo=TRUE, results='hide'}
+dofile<-"wrapper32.do"
+full.path.dofile<-file.path(stata_analysis_code,dofile)
+cmd<-paste0('"',stataexe, '" /e do "',full.path.dofile,'"')
+system(cmd, wait=TRUE)
+```
+
+
+\begin{table}
+  \begin{center}
+    \input{./tables/regression_tableB.tex}
+        \caption{Here is regression table B, produced by that wrapper \label{regression_coefsB}}
+  \end{center}
+\end{table}
+
+
+
+\begin{figure}
+  \begin{center}
+    \caption{And here is scatterplot B \label{scatterplotB_fig}}
+      \includegraphics[width=0.5\textwidth]{./images/scatterplotB.png} 
+  \end{center}
+\end{figure}
+
