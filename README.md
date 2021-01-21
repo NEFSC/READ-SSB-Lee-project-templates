@@ -1,2 +1,2 @@
-# READ-SSB-Lee-project-template
+# READ-SSB-Lee-project-templates
 Project organization
