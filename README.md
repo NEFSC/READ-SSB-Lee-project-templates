@@ -8,6 +8,9 @@ A small repository that will get you started with setting up an organized projec
 1. Sample code for using R to call stata.
 1. Little bits of code from my ACE price project, in case it's useful.
 
+# Prelude
+Look on my code, ye Mighty, and despair!
+
 # Overview and Folder structure
 
 This is mostly borrowed from the world bank's EDB. https://dimewiki.worldbank.org/wiki/Stata_Coding_Practices
