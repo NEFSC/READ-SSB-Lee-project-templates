@@ -109,4 +109,4 @@ Sorry, I'm not slick enough to pass a little arguement through to a stata do fil
 1. who maintains and contributes to the project. Min-Yang
 
 # License file
-See here for the [license file] (https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/license.md)
+See here for the [license file](https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/license.md)
