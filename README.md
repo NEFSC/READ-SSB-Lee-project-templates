@@ -14,13 +14,14 @@ Look on my code, ye Mighty, and despair!
 # Overview and Folder structure
 
 This is mostly borrowed from the world bank's EDB. https://dimewiki.worldbank.org/wiki/Stata_Coding_Practices
+Please use forward slashes (that is C:/path/to/your/folder) instead of backslashes for unix/mac compatability. I'm forgetful about this. 
 
 I keep each project in a separate folder.  The folder names get stored as a macro in stata's startup profile.do.  This lets me start working on any of my projects by opening stata and typing: 
 ```
 do $my_project_name
 ```
+Rstudio users using projects don't have to do anything for paths.
 
-R users don't have to do anything if they are using Rstudio's projects properly.
 
 Here's more: [project_logistics.md](https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/documentation/project_logistics.md) 
 
@@ -38,7 +39,7 @@ Pay attention to where you put this, you will need it later.
 ## Set up your profile.do
 
 1. Open up /stata_code/sample/sample_profile.do.
-1. Enter and modify with your own information (username,directories).  You will want the project_template global macro to point to the "project_logistics\folder_setup_globals.do" that is in your project directory (for me this is C:\Users\Min-Yang.Lee\Documents\project_templates\stata_code\project_logistics\folder_setup_globals.do
+1. Enter and modify with your own information (username,directories).  You will want the project_template global macro to point to the "project_logistics/folder_setup_globals.do" that is in your project directory (for me this is C:/Users/Min-Yang.Lee/Documents/project_templates\stata_code/project_logistics/folder_setup_globals.do
 1. Save it as "C:\ado\profile.do".  [Here is the stata manual](https://www.stata.com/manuals15/gsub.pdf) about this.
 
 
@@ -87,8 +88,8 @@ Before using it, you should
 This is in Rmd_stata_integration.Rmd. You should need to change only two lines of code:
 
 1.  Line 12 of the Rmd_stata_integration.Rmd should be changed to the directory where you cloned this repository locally.
-1.  Line 14 of stata_code\analysis\test1.do should also be changed to the same directory.
-1.  Line 14 of stata_code\analysis\wrapper32.do should be changed to the same directory.
+1.  Line 14 of stata_code/analysis/test1.do should also be changed to the same directory.
+1.  Line 14 of stata_code/analysis/wrapper32.do should be changed to the same directory.
 
 Sorry, I'm not slick enough to pass a little arguement through to a stata do file.
 
