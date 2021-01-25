@@ -20,6 +20,8 @@ I keep each project in a separate folder.  The folder names get stored as a macr
 do $my_project_name
 ```
 
+R users don't have to do anything if they are using Rstudio's projects properly.
+
 Here's more: [project_logistics.md](https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/documentation/project_logistics.md) 
 
 ## Set up Oracle and ODBC
