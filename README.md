@@ -18,7 +18,7 @@ The easist thing to do is to clone this repository to a place on your computer. 
 
 Min-Yang put the project into:
 ```
-C:\Users\Min-Yang.Lee\Documents\project_templates
+C:/Users/Min-Yang.Lee/Documents/project_templates
 ```
 Pay attention to where you put this, you will need it later.
 
