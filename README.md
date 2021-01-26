@@ -55,6 +55,12 @@ do "/${my_codedir}/project_logistics/run_this_once_folder_setup.do" /*this line 
 ```
 
 
+You can also set up folders in R by using the file 
+
+"R_code/project_logistics/R_paths_libraries_setup.R"
+
+
+
 # Sample code for extracting data from oracle using stata
 
 do "/${extraction_code}/extract_from_sole.do"
