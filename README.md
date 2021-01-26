@@ -41,7 +41,7 @@ Here's more: [project_logistics.md](https://github.com/minyanglee/READ-SSB-Lee-p
 1.  Delete or Comment out the Operating system section that is irrelevant to you.  Enter your own information (oracle username and password).  
 1.  Rename and save it in a place you can find that is NOT in this repository. Min-Yang put it into 
 ```
-C:\Users\Min-Yang.Lee\Documents\common\odbc_setup_macros.do
+C:/Users/Min-Yang.Lee/Documents/common/odbc_setup_macros.do
 ```
 
 Pay attention to where you put this, you will need it later.
