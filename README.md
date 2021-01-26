@@ -1,6 +1,6 @@
 # Project Template
 
-A small repository that will get you started with setting up an organized project and get data off the NEFSC oracle servers.  This repository contains:
+A small repository that will get you set up an organized project and get data off the NEFSC oracle servers.  This repository contains:
 
 1. A folder structure and some utilities that will (hopefully) help you keep things organized
 1. Sample code for extracting data from oracle using stata.
