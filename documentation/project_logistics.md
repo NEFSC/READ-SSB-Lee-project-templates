@@ -58,7 +58,7 @@ Here are two ways to be ready to run the project.
 add the following 2 lines
 
 ```
-global user cameron
+global user minyangWin
 global aceprice full\path\to\folder_setup_globals.do 
 ```
 2. Restart stata
