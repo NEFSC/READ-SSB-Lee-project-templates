@@ -46,6 +46,8 @@ C:/Users/Min-Yang.Lee/Documents/common/odbc_setup_macros.do
 
 Pay attention to where you put this, you will need it later.
 
+### ODBC Setup
+You'll have to get someone from ITD to setup your ODBC connections. It should looks something like this.
 
 ![ODBC driver pic](https://github.com/NEFSC/READ-SSB-Lee-project-templates/blob/main/images/odbc_drivers.png) 
 
