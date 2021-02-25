@@ -11,7 +11,7 @@ A small repository that will get you set up an organized project and get data of
 # Prelude
 Look on my code, ye Mighty, and despair!
 
-## Cloning from Github and other setup
+# Cloning from Github and other setup
 Min-Yang is using Rstudio to write .Rmd or .md documentation. He is also using Rstudio's git version control to commit/push/pull from github. It works reasonably well.  You will also need to install git.
 
 The easist thing to do is to clone this repository to a place on your computer. [Here's a starting guide](https://cfss.uchicago.edu/setup/git-with-rstudio/).  Don't put spaces in the name.  Cloning the repository will set up many, but not all of the folders.
@@ -54,7 +54,7 @@ You'll have to get someone from ITD to setup your ODBC connections. It should lo
 
 
 
-## Stata and  ODBC
+## Getting Data with Stata and  ODBC
 1.  Open up /stata_code/sample/odbc_connection_macro_sample.do. 
 1.  Delete or Comment out the Operating system section that is irrelevant to you.  Enter your own information (oracle username and password).  
 1.  Rename and save it in a place you can find it. Min-Yang put it into 
@@ -97,7 +97,7 @@ should extract a table from sole.
 
 
 
-# R and ODBC
+## Getting Data with R and RODBC
 Code to extract data from oracle using R is here:
 
 ```
