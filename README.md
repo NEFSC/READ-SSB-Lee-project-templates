@@ -36,17 +36,15 @@ Rstudio users using projects don't have to do anything for paths.
 
 Here's more: [project_logistics.md](https://github.com/minyanglee/READ-SSB-Lee-project-templates/blob/main/documentation/project_logistics.md) 
 
-## Set up Oracle and ODBC
-1.  Open up /stata_code/sample/odbc_connection_macro_sample.do. 
-1.  Delete or Comment out the Operating system section that is irrelevant to you.  Enter your own information (oracle username and password).  
-1.  Rename and save it in a place you can find that is NOT in this repository. Min-Yang put it into 
-```
-C:/Users/Min-Yang.Lee/Documents/common/odbc_setup_macros.do
-```
+# Getting Data
+Oracle usernames, passwords, server addresses, and other credentials cannot be stored on github.  Therefore, our general approach will be to
+1. Put your username, password, and other into a small piece of code
+2. Run that code before you need to extract data (perhaps every time you start Stata or R).
+3. That's it.
 
-Pay attention to where you put this, you will need it later.
+This approach keeps account names, passwords, and other things separate. It also increases reproducability - other users just need to have their own piece of code that contains their credentials.
 
-### ODBC Setup
+## ODBC Setup
 You'll have to get someone from ITD to setup your ODBC connections. It should looks something like this.
 
 ![ODBC driver pic](https://github.com/NEFSC/READ-SSB-Lee-project-templates/blob/main/images/odbc_drivers.png) 
@@ -54,14 +52,26 @@ You'll have to get someone from ITD to setup your ODBC connections. It should lo
 ![ODBC DSN pic](https://github.com/NEFSC/READ-SSB-Lee-project-templates/blob/main/images/odbc_dsn.png) 
 
 
-## Set up your profile.do
+
+
+## Stata and  ODBC
+1.  Open up /stata_code/sample/odbc_connection_macro_sample.do. 
+1.  Delete or Comment out the Operating system section that is irrelevant to you.  Enter your own information (oracle username and password).  
+1.  Rename and save it in a place you can find it. Min-Yang put it into 
+```
+C:/Users/Min-Yang.Lee/Documents/common/odbc_setup_macros.do
+```
+You can certainly put it into the repository, but if you do that, make sure to add it to the .gitignore so it is never uploaded to github. Regardless of where you put it, remember where it is, you will need it later.
+
+
+### Set up your profile.do
 
 1. Open up /stata_code/sample/sample_profile.do.
 1. Enter and modify with your own information (username,directories).  You will want the project_template global macro to point to the "project_logistics/folder_setup_globals.do" that is in your project directory (for me this is C:/Users/Min-Yang.Lee/Documents/project_templates\stata_code/project_logistics/folder_setup_globals.do
 1. Save it as "C:\ado\profile.do".  [Here is the stata manual](https://www.stata.com/manuals15/gsub.pdf) about this.
 
 
-## Set up the rest of the project. 
+### Set up the rest of the project. 
 1. Open up "project_logistics/run_this_once-folder_setup.do"
 1.  Add an "if" statement analogous to lines 15-18.  Put this below minyang's if statement.  Change the directory to match the one you used when you initially cloned this repository.
 1. Open up "project_logistics/folder_setup_globals.do"
@@ -79,31 +89,26 @@ You can also set up folders in R by using the file
 
 
 
-# Sample code for extracting data from oracle using stata
+### Sample code for extracting data from oracle using stata
 
 do "/${extraction_code}/extract_from_sole.do"
 
 should extract a table from sole. 
 
 
-# Other Sample code for  stata
-I've included some other code to get data into stata, including getting data from St. Louis Federal Reserve.  I've also left some bits of code that assemble and process data.
 
-Also, take a look here: https://github.com/cameronspeir/NOAA-Foreign-Fishery-Trade-Data-API to get data from the NOAA Foreign fishery trade .
-
-
-# Sample code for extracting data from oracle using R.
+# R and ODBC
 Code to extract data from oracle using R is here:
 
 ```
-/R_code/data_extraction_processing/extraction/r_oracle_connection.R
+/R_code/data_extraction_processing/extraction/rodbc_extraction.R
 ```
-Before using it, you should
+To extract data: 
 
 1. Rename /R_code/project_logistics/R_code/R_credentials_sample.R to R_credentials.R.
-1. Fill in your id, password, server names, hosts, and ports
+1. Fill in your id and password
 1. Change the first line of  /R_code/project_logistics/R_code/R_paths_libraries_setup.R to point to your project directory. Source .
-1. Make the same change to /R_code/data_extraction_processing/extraction/r_oracle_connection.R. Source.
+1. Make the same change to /R_code/data_extraction_processing/extraction/rodbc_extraction.R. Source.
 
 
 
@@ -116,6 +121,14 @@ This is in Rmd_stata_integration.Rmd. You should need to change only two lines o
 1.  Line 14 of stata_code/analysis/wrapper32.do should be changed to the same directory.
 
 Sorry, I'm not slick enough to pass a little arguement through to a stata do file.
+
+
+
+### Other Sample code for  stata
+I've included some other code to get data into stata, including getting data from St. Louis Federal Reserve.  I've also left some bits of code that assemble and process data.
+
+Also, take a look here: https://github.com/cameronspeir/NOAA-Foreign-Fishery-Trade-Data-API to get data from the NOAA Foreign fishery trade .
+
 
 
 # Problems  
