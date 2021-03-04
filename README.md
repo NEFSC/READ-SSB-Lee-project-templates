@@ -10,6 +10,13 @@ A small repository that will get you set up an organized project and get data of
 1. Sample code for using R to call stata.
 1. Little bits of code from my ACE price project, in case it's useful.
 
+Please help make this a valuable up-to-date resource.  To add your knowledge:
+1.   [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) - It's in the top right of github.
+1.   Make your changes  - click the file you want to edit and then the little pencil on the right side.  ![Here's a picture](/images/fork_edit.jpg)
+1.   [Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) so the changes get into the document.
+
+
+
 # Prelude
 Look on my code, ye Mighty, and despair!
 
