@@ -21,7 +21,7 @@ Please help make this a valuable up-to-date resource.  To add your knowledge:
 Look on my code, ye Mighty, and despair!
 
 # Cloning from Github and other setup
-Min-Yang is using Rstudio to write .Rmd or .md documentation. He is also using Rstudio's git version control to commit/push/pull from github. It works reasonably well.  You will also need to install git.
+Min-Yang is using Rstudio to write .Rmd or .md documentation. He is also using Rstudio's git version control to commit/push/pull from github. It works reasonably well.  You will also need to install git.  You might need to create a personal access token and save it using gitcreds: gitcreds_set()
 
 The easist thing to do is to clone this repository to a place on your computer. [Here's a starting guide](https://cfss.uchicago.edu/setup/git-with-rstudio/).  Don't put spaces in the name.  Cloning the repository will set up many, but not all of the folders.
 
