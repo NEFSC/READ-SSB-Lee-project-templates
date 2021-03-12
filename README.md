@@ -21,7 +21,7 @@ Please help make this a valuable up-to-date resource.  To add your knowledge:
 Look on my code, ye Mighty, and despair!
 
 # Cloning from Github and other setup
-Min-Yang is using Rstudio to write .Rmd or .md documentation. He is also using Rstudio's git version control to commit/push/pull from github. It works reasonably well.  You will also need to install git.  You might need to create a personal access token and save it using gitcreds: gitcreds_set()
+Min-Yang is using Rstudio to write .Rmd or .md documentation. He is also using Rstudio's git version control to commit/push/pull from github. It works reasonably well.  You will also need to install git. 
 
 The easist thing to do is to clone this repository to a place on your computer. [Here's a starting guide](https://cfss.uchicago.edu/setup/git-with-rstudio/).  Don't put spaces in the name.  Cloning the repository will set up many, but not all of the folders.
 
@@ -30,6 +30,21 @@ Min-Yang put the project into:
 C:/Users/Min-Yang.Lee/Documents/project_templates
 ```
 Pay attention to where you put this, you will need it later.
+
+## Github on the servers
+
+If you want to use github on one of the NEFSC servers, you will need to use a Personal Access Token, not your github password. [Here](https://maurolepore.netlify.app/2017/12/06/2017-12-06-best-prectice-for-installing-packages-from-private-repos/) is how you can set a personal access token.
+
+To save your PAT, you will need to change the "credential.helper" in git config.  
+
+Open a shell: ![in Rstudio by doing this](/images/git_shell.jpg) 
+
+In the bottom left, type:
+```
+ git config --global credential.helper store 
+```
+On the next commit, push, pull, you will need to enter your username and PAT. The credentials will be stored, so you won't have to do that again.  [More Details on Stackoverflow](https://stackoverflow.com/questions/46645843/where-to-store-the-personal-access-token-from-github).
+
 
 # Overview and Folder structure
 
@@ -56,9 +71,9 @@ This approach keeps account names, passwords, and other things separate. It also
 ## ODBC Setup
 You'll have to get someone from ITD to setup your ODBC connections. It should looks something like this.
 
-![ODBC driver pic](https://github.com/NEFSC/READ-SSB-Lee-project-templates/blob/main/images/odbc_drivers.png) 
+![ODBC driver pic](/images/odbc_drivers.png) 
 
-![ODBC DSN pic](https://github.com/NEFSC/READ-SSB-Lee-project-templates/blob/main/images/odbc_dsn.png) 
+![ODBC DSN pic](/images/odbc_dsn.png) 
 
 
 
