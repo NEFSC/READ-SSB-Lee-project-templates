@@ -45,6 +45,12 @@ In the bottom left, type:
 ```
 On the next commit, push, pull, you will need to enter your username and PAT. The credentials will be stored, so you won't have to do that again.  [More Details on Stackoverflow](https://stackoverflow.com/questions/46645843/where-to-store-the-personal-access-token-from-github).
 
+If you need to change your GITHUB_PAT, you can do it like this:
+```
+library("credentials")
+credentials::set_github_pat()
+```
+and then entering the PAT.  There are probably other ways to do it.
 
 # Overview and Folder structure
 
