@@ -6,13 +6,12 @@
 *.Rds
 .Ruserdata
 R_credentials.R
-/data_folder
 *.log
 *.html
-/results
 library.bib
 *.pdf
 *.doc
 *.docx
 *.aux
 *.out
+*.dta
