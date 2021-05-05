@@ -14,7 +14,9 @@ sole.connect.string<-paste(
   "(DESCRIPTION=",
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", shost, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", ssid, ")))", sep="")
-# Don't put this here. You should put it in where you make the query.
+
+
+# Don't run this here.  You should put it in where you make the query and then close it when you are done with dbDisconnect(sole_conn)
 # sole_conn<-dbConnect(drv, id, password=solepw, dbname=sole.connect.string)
 
 
@@ -27,5 +29,6 @@ nova.connect.string<-paste(
   "(DESCRIPTION=",
   "(ADDRESS=(PROTOCOL=tcp)(HOST=", nhost, ")(PORT=", port, "))",
   "(CONNECT_DATA=(SID=", ssid2, ")))", sep="")
-# Don't put this here. You should put it in where you make the query.
+
+# Don't run this here.  You should put it in where you make the query and then close it when you are done with dbDisconnect(nova_conn)
 # nova_conn<-dbConnect(drv, id, password=novapw, dbname=nova.connect.string)

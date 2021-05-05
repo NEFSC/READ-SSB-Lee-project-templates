@@ -1,6 +1,9 @@
 # R script to create folders
-# This line is the only line you shoudl have to change to get it to run.
- my_projdir<-"C:/Users/Min-Yang.Lee/Documents/project_templates"
+# If you make a project from the template, all these folders will the there, so you will not have to run it.
+
+
+# This line is the only line you should have to change to get it to run.
+my_projdir<-"C:/Users/Min-Yang.Lee/Documents/project_templates"
 
 # Setup directories
 
