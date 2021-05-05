@@ -1,3 +1,4 @@
+/* here is a piece of code that shows how to extract data from sole */
 #delimit;
 
 clear;

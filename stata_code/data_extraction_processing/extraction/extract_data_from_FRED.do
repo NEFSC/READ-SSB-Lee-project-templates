@@ -1,4 +1,8 @@
-/* extract quarterly data from FRED 
+
+
+/* 
+This is some code that shows how to extract data from STL FED with Stata's import fred. You will need to set an API key.
+extract quarterly data from FRED 
 series_id                     	industry_code	product_code	seasonal	base_date	series_title	footnote_codes	begin_year	begin_period	end_year	end_period	
 PCU31171-31171-               	31171-	31171-	U	200312	PPI industry data for Seafood product preparation and packaging, not seasonally adjusted		2003	M12	2020	M06
 PCU311710311710               	311710	311710	U	201112	PPI industry data for Seafood product preparation and packaging, not seasonally adjusted		2011	M12	2020	M06
