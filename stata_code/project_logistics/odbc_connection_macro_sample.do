@@ -20,7 +20,7 @@ global mygarfo_pwd "your_garfo_pwd"
 /********************************************************************************************************/
 /* PART 1: WINDOWS */
 /* if DMS has properly configured your ODBC connections for sole, nova,and musky, this will work on Windows. */
-/* Min-Yang's preferred approach to connecting to NEFSC's Oracle from Stata in Mint14 is:
+/* Min-Yang's preferred approach to connecting to NEFSC's Oracle from Stata in Windows is:
 
 
 odbc load,  exec("select something from table 
