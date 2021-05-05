@@ -97,9 +97,5 @@ A pair of small do files to set up folders and then make stata aware of folders.
 
 The only "data_extraction_processing" that you may need to run is the code to re-pull deflators.  This can be done with "/data_extraction_processing/wrapper_external.do".  You'll need an API key to import fred.  Extracting OES and QCEW data is really slow. 
 
-## summary stats
-
-The code in here will do a bunch of data exploration.  Violin plots take a while to run.  
-
 ## Sub-projects
 Code for smaller pieces of the project are all in their individual folders in "stata_code". For the most part, they produce datasets or tables in  "/results/" and images in "/images/"
