@@ -4,9 +4,11 @@ In general, I'm trying to keep code, raw data, processed data, results, and imag
 Smaller bits of analysis that are related (or depend on previous) are collected together in a wrapper.
 
 # Cloning from Github and other setup
-Min-Yang is using Rstudio to write Rmd and it's git version controling to commit/push/pull from github. It works reasonably well.  You will also need git installed.
+Min-Yang is using Rstudio to write Rmd and it's git version controling to commit/push/pull from github. It works reasonably well.  Github desktop is fine too.  You will also need git installed.
 
-The easist thing to do is to clone this repository to a place on your computer. [Here's a starting guide](https://cfss.uchicago.edu/setup/git-with-rstudio/).  Don't put spaces in the name.  This will set up many, but not all of the folders.
+Use the github web interface to make a new project from the READ-SSB-Lee-project-template.  Then make a local copy on your computer by cloning it:
+
+[Here's a starting guide on how to use git with Rstudio](https://cfss.uchicago.edu/setup/git-with-rstudio/).  Don't put spaces in the name.  This will set up many, but not all of the folders.
 
 His windows computer has put the aceprice project into:
 ```
