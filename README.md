@@ -1,6 +1,6 @@
 # Project Template
 
-A small repository that will get you set up an organized project and has a tiny bit of sample code about how to get data off the NEFSC oracle servers.  
+An accompanyment to the https://github.com/NEFSC/READ-SSB-Lee-project-template. This is a small repository that will hopefully explain what is going on there. There's a bit of notes on how to set up a moderately organized project and has a tiny bit of sample code about how to get data off the NEFSC oracle servers.  I know it's somewhat bad form to move the documentation to a different place, but I wanted to keep the actual template  clean.  
 
 1. A folder structure and some utilities that will (hopefully) help you keep things organized
 1. Getting Data
