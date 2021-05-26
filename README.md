@@ -20,7 +20,11 @@ Rstudio users using projects don't have to do this step.  But it is convenient t
 
 # On passwords and other confidential information
 
-Basically, you will want to store them in a place that does not get uploaded to github. For stata users, there is a description [here](/documentation/project_logistics.md). For R users, try storing it in .Renviron. Or copy the general approach.
+Basically, you will want to store them in a place that does not get uploaded to github. 
+
+For stata users, there is a description [here](/documentation/project_logistics.md). 
+
+For R users, try storing it in .Renviron. Or copy the general approach from stata.
 
 
 # NOAA Requirements
