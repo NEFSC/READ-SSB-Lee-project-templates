@@ -49,7 +49,7 @@ It will set up directories for you. The directories I use are
 /images/
 /data_folder/
 ```
-There are subdirectories in each. Put master data into **data_folder/master**.  Put the deflatorsQ.dta and deflatorsY.dta files into **data_folder/external** (or you can build your own from the stata_code/external_data/external_data_FRED.do file).
+There are subdirectories in each. Put your main data into **data_folder/main**.  Put the deflatorsQ.dta and deflatorsY.dta files into **data_folder/external** (or you can build your own from the stata_code/external_data/external_data_FRED.do file).
 
 
 # Running code
